@@ -6,21 +6,21 @@ import scala.collection.mutable.ArrayBuffer
 object Room extends Actor {
   var clients = new ArrayBuffer[Client]()
 
-  def onConnect(client: Client) = {
+  def onConnect(client: Client) {
     this ! ('onConnect, client)
   }
 
-  def onDisconnect(client: Client) = {
+  def onDisconnect(client: Client) {
     this ! ('onDisconnect, client)
   }
 
-  def onResquest(client: Client, req: String) = {
+  def onResquest(client: Client, req: String) {
     this ! ('onResquest, client, req)
   }
 
   //--------------------------------------------------------------------------
 
-  def act = {
+  def act {
     react {
       case ('onConnect, client: Client) =>
         clients += client

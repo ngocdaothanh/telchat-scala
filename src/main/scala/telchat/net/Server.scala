@@ -6,7 +6,7 @@ import org.jboss.netty.bootstrap.ServerBootstrap
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory
 
 class Server(port: Int) {
-  def start = {
+  def start {
     val channelFactory = new NioServerSocketChannelFactory(
       Executors.newCachedThreadPool, Executors.newCachedThreadPool
     )
