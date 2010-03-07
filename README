@@ -2,3 +2,10 @@ This is the same as telchat-clojure:
 http://github.com/ngocdaothanh/telchat-clojure
 
 The only difference is that this program is written in Scala.
+
+To compile and run on port 3000:
+mvn compile
+mvn scala:run -DmainClass=telchat.App
+
+See also:
+http://scala-tools.org/mvnsites/maven-scala-plugin/
